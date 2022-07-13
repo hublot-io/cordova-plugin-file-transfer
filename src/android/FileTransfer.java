@@ -693,12 +693,12 @@ public class FileTransfer extends CordovaPlugin {
             }
         }
 
-        if (!Boolean.TRUE.equals(shouldAllowRequest)) {
+        /*if (!Boolean.TRUE.equals(shouldAllowRequest)) {
             LOG.w(LOG_TAG, "The Source URL is not in the Allow List: '" + source + "'");
             JSONObject error = createFileTransferError(CONNECTION_ERR, source, target, null, 401, null);
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.IO_EXCEPTION, error));
             return;
-        }
+        }*/
 
         final RequestContext context = new RequestContext(source, target, callbackContext);
         synchronized (activeRequests) {
